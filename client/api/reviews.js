@@ -8,24 +8,7 @@ export default async function handler(req, res) {
   if (req.method === 'GET') {
     return res.status(200).json({
       success: true,
-      data: [
-        {
-          _id: 'r1',
-          author: 'Gurpreet Singh',
-          rating: 5,
-          text: 'Excellent sofa and carpet deep cleaning done by Umesh and his team in Model Town. Very polite and thorough work.',
-          source: 'google',
-          reviewedAt: '2025-01-15'
-        },
-        {
-          _id: 'r2',
-          author: 'Pooja Sharma',
-          rating: 5,
-          text: 'Booked kitchen and bathroom cleaning for Diwali. All grease and hard water stains were completely removed. 5 stars!',
-          source: 'google',
-          reviewedAt: '2025-02-10'
-        }
-      ]
+      data: []
     });
   }
 

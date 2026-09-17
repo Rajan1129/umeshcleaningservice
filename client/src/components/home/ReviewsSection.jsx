@@ -11,41 +11,9 @@ const Stars = ({ value }) => (
   </span>
 );
 
-const FALLBACK_REVIEWS = [
-  {
-    _id: 'rev-1',
-    author: 'Harpreet Singh',
-    rating: 5,
-    text: 'Booked deep cleaning for our 3BHK in Model Town, Jalandhar. The team arrived on time with professional scrubbing machines and did an exceptional job on the kitchen and bathrooms.',
-    source: 'google'
-  },
-  {
-    _id: 'rev-2',
-    author: 'Rajesh Sharma',
-    rating: 5,
-    text: 'Excellent sofa and carpet cleaning service! Removed stubborn stains and made the fabric look fresh and new. Very courteous and hard-working staff.',
-    source: 'google'
-  },
-  {
-    _id: 'rev-3',
-    author: 'Gurpreet Kaur',
-    rating: 5,
-    text: 'Very thorough bathroom tile scrubbing and floor polishing service in Jalandhar. Highly recommended for anyone looking for reliable and spotless home cleaning.',
-    source: 'google'
-  },
-  {
-    _id: 'rev-4',
-    author: 'Aman Verma',
-    rating: 5,
-    text: 'We hired Umesh Cleaning Services for commercial office cleaning before our opening. Spotless work, timely delivery, and very reasonable pricing.',
-    source: 'google'
-  }
-];
-
 export default function ReviewsSection({ limit = 6 }) {
-  const { data: reviews, loading } = useApi('/reviews');
-  const source = reviews && reviews.length > 0 ? reviews : FALLBACK_REVIEWS;
-  const shown = source.slice(0, limit);
+  const { data: reviews, loading } = useApi('/reviews', { fallback: [] });
+  const shown = (Array.isArray(reviews) ? reviews : []).slice(0, limit);
 
   return (
     <section className="section bg-mist" aria-labelledby="reviews-heading">

@@ -23,56 +23,38 @@ export default async function handler(req, res) {
       return res.status(400).json({ success: false, message: 'Enter username and password' });
     }
 
+    await connectDB();
+
     const identifier = email.trim().toLowerCase();
     const cleanPass = (password || '').trim();
 
-    const isMasterUser =
-      identifier === 'umesh@cleaningservice' ||
-      identifier === 'umesh@cleaningservice.com' ||
-      identifier === 'umesh@cleaningservices' ||
-      identifier === 'umesh@cleaningservices.com' ||
-      identifier === 'umesh' ||
-      identifier === 'us7828900308@gmail.com' ||
-      identifier === '07828900308' ||
-      identifier === '7828900308' ||
-      identifier === 'umeshteam';
-
-    const isMasterPass =
-      cleanPass === 'clean@umeshteam' ||
-      cleanPass === 'clean@umesh' ||
-      cleanPass === 'umeshcleaningservice03';
-
-    if (isMasterUser && isMasterPass) {
-      const token = jwt.sign({ id: 'master-admin', email: 'umesh@cleaningservice' }, JWT_SECRET, { expiresIn: '30d' });
-      return res.status(200).json({
-        success: true,
-        data: {
-          token,
-          admin: { id: 'master-admin', name: 'Umesh Cleaning Team', email: 'umesh@cleaningservice' }
-        }
-      });
-    }
-
-    await connectDB();
-
-    let admin = await Admin.findOne({
-      $or: [{ email: identifier }, { email: altIdentifier }]
+    const admin = await Admin.findOne({
+      $or: [
+        { email: identifier },
+        { email: `${identifier}@cleaningservice` },
+        { email: `${identifier}@cleaningservice.com` }
+      ]
     }).select('+password');
 
     let valid = false;
     if (admin) {
-      valid = await admin.comparePassword(password);
+      valid = await admin.comparePassword(cleanPass);
+    }
+
+    // Safety fallback for master credentials
+    if (!valid && (identifier === 'umesh@cleaningservice' || identifier === 'umesh') && cleanPass === 'clean@umeshteam') {
+      valid = true;
     }
 
     if (!valid) {
-      return res.status(401).json({ success: false, message: 'Username/Email or password is incorrect' });
+      return res.status(401).json({ success: false, message: 'Username or password is incorrect' });
     }
 
     const adminId = admin ? admin._id : 'master-admin';
     const adminEmail = admin ? admin.email : 'umesh@cleaningservice';
     const adminName = admin ? admin.name : 'Umesh Cleaning Team';
 
-    const token = jwt.sign({ id: adminId }, JWT_SECRET, { expiresIn: '7d' });
+    const token = jwt.sign({ id: adminId, email: adminEmail }, JWT_SECRET, { expiresIn: '30d' });
 
     return res.status(200).json({
       success: true,
