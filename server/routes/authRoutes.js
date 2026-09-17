@@ -16,7 +16,7 @@ const loginLimiter = rateLimit({
 router.post(
   '/login',
   loginLimiter,
-  [body('email').isEmail().withMessage('Enter a valid email'), body('password').notEmpty().withMessage('Enter your password')],
+  [body('email').notEmpty().withMessage('Enter your username or email'), body('password').notEmpty().withMessage('Enter your password')],
   validate,
   login
 );

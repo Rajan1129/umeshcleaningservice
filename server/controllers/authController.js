@@ -8,9 +8,18 @@ const signToken = (id) =>
 
 export const login = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
-  const admin = await Admin.findOne({ email: email.toLowerCase() }).select('+password');
+  const identifier = (email || '').trim().toLowerCase();
+  const altIdentifier = identifier.includes('@') && !identifier.includes('.') ? `${identifier}.com` : identifier;
+
+  const admin = await Admin.findOne({
+    $or: [
+      { email: identifier },
+      { email: altIdentifier }
+    ]
+  }).select('+password');
+
   if (!admin || !(await admin.comparePassword(password))) {
-    throw new ApiError(401, 'Email or password is incorrect');
+    throw new ApiError(401, 'Username/Email or password is incorrect');
   }
 
   admin.lastLoginAt = new Date();

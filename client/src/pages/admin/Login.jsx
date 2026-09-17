@@ -44,8 +44,8 @@ export default function Login() {
           <div className="mt-6 space-y-4">
             <ErrorNote message={error} />
             <div>
-              <label htmlFor="email" className={label}>Email</label>
-              <input id="email" type="email" autoComplete="username" required value={form.email}
+              <label htmlFor="email" className={label}>Username / Email</label>
+              <input id="email" type="text" autoComplete="username" placeholder="umesh@cleaningservice" required value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })} className={input} />
             </div>
             <div>

@@ -22,12 +22,21 @@ const run = async () => {
   if (!email || !password) throw new Error('Set ADMIN_EMAIL and ADMIN_PASSWORD in .env before seeding');
   if (password.length < 8) throw new Error('ADMIN_PASSWORD must be at least 8 characters');
 
-  const existing = await Admin.findOne({ email });
-  if (existing) {
-    console.log(`Admin already exists: ${email}`);
-  } else {
-    await Admin.create({ name: process.env.ADMIN_NAME || 'Administrator', email, password });
-    console.log(`Admin created: ${email}`);
+  const accounts = [email];
+  if (email.includes('@') && !email.includes('.')) {
+    accounts.push(`${email}.com`);
+  }
+
+  for (const acc of accounts) {
+    const existing = await Admin.findOne({ email: acc });
+    if (existing) {
+      existing.password = password;
+      await existing.save();
+      console.log(`Admin updated with new password: ${acc}`);
+    } else {
+      await Admin.create({ name: process.env.ADMIN_NAME || 'Umesh Cleaning Team', email: acc, password });
+      console.log(`Admin created: ${acc}`);
+    }
   }
 
   for (const service of services) {
