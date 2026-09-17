@@ -18,11 +18,19 @@ export default function Login() {
     e.preventDefault();
     setLoading(true);
     setError('');
+    const cleanEmail = form.email.trim();
+    const cleanPass = form.password.trim();
+    if (!cleanEmail || !cleanPass) {
+      setError('Please enter both username and password.');
+      setLoading(false);
+      return;
+    }
     try {
-      await login(form.email, form.password);
+      await login(cleanEmail, cleanPass);
       navigate('/admin');
     } catch (err) {
-      setError(err.message);
+      const msg = err?.message || 'Login failed. Please verify username and password.';
+      setError(msg);
     } finally {
       setLoading(false);
     }

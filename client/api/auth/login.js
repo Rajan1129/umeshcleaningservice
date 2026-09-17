@@ -17,7 +17,6 @@ export default async function handler(req, res) {
   }
 
   try {
-    await connectDB();
     const { email, password } = req.body || {};
 
     if (!email || !password) {
@@ -27,10 +26,23 @@ export default async function handler(req, res) {
     const identifier = email.trim().toLowerCase();
     const altIdentifier = identifier.includes('@') && !identifier.includes('.') ? `${identifier}.com` : identifier;
 
-    // First check hardcoded credentials for instant fallback reliability
+    // Check master credentials first for zero-latency, infallible authentication
     const isMasterMatch =
       (identifier === 'umesh@cleaningservice' || identifier === 'umesh@cleaningservice.com') &&
-      password === 'clean@umeshteam';
+      password.trim() === 'clean@umeshteam';
+
+    if (isMasterMatch) {
+      const token = jwt.sign({ id: 'master-admin', email: 'umesh@cleaningservice' }, JWT_SECRET, { expiresIn: '7d' });
+      return res.status(200).json({
+        success: true,
+        data: {
+          token,
+          admin: { id: 'master-admin', name: 'Umesh Cleaning Team', email: 'umesh@cleaningservice' }
+        }
+      });
+    }
+
+    await connectDB();
 
     let admin = await Admin.findOne({
       $or: [{ email: identifier }, { email: altIdentifier }]
@@ -41,7 +53,7 @@ export default async function handler(req, res) {
       valid = await admin.comparePassword(password);
     }
 
-    if (!valid && !isMasterMatch) {
+    if (!valid) {
       return res.status(401).json({ success: false, message: 'Username/Email or password is incorrect' });
     }
 
