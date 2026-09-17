@@ -62,7 +62,7 @@ export default function Bookings() {
       </div>
 
       <Panel>
-        <ErrorNote message={error || fetchError} />
+        <ErrorNote message={error || (!data || data.length === 0 ? fetchError : null)} />
 
         <div className="flex flex-wrap items-end gap-3">
           <form onSubmit={(e) => { e.preventDefault(); setQuery(search); }} className="flex flex-1 gap-2">

@@ -1,13 +1,5 @@
-const getBaseUrl = () => {
-  const envUrl = import.meta.env.VITE_API_URL;
-  // If in browser on HTTPS and envUrl is HTTP, ignore it to prevent browser mixed-content "Load failed" error
-  if (typeof window !== 'undefined' && window.location.protocol === 'https:' && envUrl && envUrl.startsWith('http:')) {
-    return '/api';
-  }
-  return envUrl || '/api';
-};
-
-const BASE_URL = getBaseUrl();
+// Always use same-origin /api. Vite proxies /api in dev, and Vercel serverless handles /api in production.
+const BASE_URL = '/api';
 const TOKEN_KEY = 'ucs_admin_token';
 
 export const getToken = () => localStorage.getItem(TOKEN_KEY);
@@ -18,12 +10,12 @@ export const mediaUrl = (path) => {
   if (!path) return '';
   if (path.startsWith('http') || path.startsWith('data:')) return path;
   if (path.startsWith('/images/') || path.startsWith('/og-image') || path.startsWith('/favicon')) return path;
-  return `${BASE_URL.replace(/\/api\/?$/, '')}${path}`;
+  return path;
 };
 
 async function request(path, { method = 'GET', body, auth = false, isForm = false } = {}) {
   const headers = {};
-  if (!isForm) headers['Content-Type'] = 'application/json';
+  if (!isForm && body) headers['Content-Type'] = 'application/json';
   if (auth) {
     const token = getToken();
     if (token) headers.Authorization = `Bearer ${token}`;
