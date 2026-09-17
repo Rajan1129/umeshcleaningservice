@@ -37,9 +37,11 @@ async function request(path, { method = 'GET', body, auth = false, isForm = fals
       body: isForm ? body : body ? JSON.stringify(body) : undefined
     });
   } catch (netErr) {
-    // Translate browser network errors (like Safari's "Load failed") into informative messages
     const isNetwork = netErr.name === 'TypeError' || netErr.message === 'Load failed' || netErr.message === 'Failed to fetch';
-    const err = new Error(isNetwork ? 'Network error. Please check your internet connection and try again.' : netErr.message);
+    const message = isNetwork
+      ? (path.includes('/auth/login') ? 'Connection error. Please verify your credentials or try again.' : 'Network connection error. Retrying…')
+      : netErr.message;
+    const err = new Error(message);
     err.isNetwork = true;
     throw err;
   }

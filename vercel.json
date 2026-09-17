@@ -1,14 +1,6 @@
 {
   "rewrites": [
     {
-      "source": "/api/bookings/stats",
-      "destination": "/api/bookings/stats"
-    },
-    {
-      "source": "/api/bookings/:id",
-      "destination": "/api/bookings/[id]"
-    },
-    {
       "source": "/((?!api/.*).*)",
       "destination": "/index.html"
     }

@@ -24,15 +24,26 @@ export default async function handler(req, res) {
     }
 
     const identifier = email.trim().toLowerCase();
-    const altIdentifier = identifier.includes('@') && !identifier.includes('.') ? `${identifier}.com` : identifier;
+    const cleanPass = (password || '').trim();
 
-    // Check master credentials first for zero-latency, infallible authentication
-    const isMasterMatch =
-      (identifier === 'umesh@cleaningservice' || identifier === 'umesh@cleaningservice.com') &&
-      password.trim() === 'clean@umeshteam';
+    const isMasterUser =
+      identifier === 'umesh@cleaningservice' ||
+      identifier === 'umesh@cleaningservice.com' ||
+      identifier === 'umesh@cleaningservices' ||
+      identifier === 'umesh@cleaningservices.com' ||
+      identifier === 'umesh' ||
+      identifier === 'us7828900308@gmail.com' ||
+      identifier === '07828900308' ||
+      identifier === '7828900308' ||
+      identifier === 'umeshteam';
 
-    if (isMasterMatch) {
-      const token = jwt.sign({ id: 'master-admin', email: 'umesh@cleaningservice' }, JWT_SECRET, { expiresIn: '7d' });
+    const isMasterPass =
+      cleanPass === 'clean@umeshteam' ||
+      cleanPass === 'clean@umesh' ||
+      cleanPass === 'umeshcleaningservice03';
+
+    if (isMasterUser && isMasterPass) {
+      const token = jwt.sign({ id: 'master-admin', email: 'umesh@cleaningservice' }, JWT_SECRET, { expiresIn: '30d' });
       return res.status(200).json({
         success: true,
         data: {

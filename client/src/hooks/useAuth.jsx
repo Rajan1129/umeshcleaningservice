@@ -39,9 +39,39 @@ export function AuthProvider({ children }) {
     const cleanEmail = (email || '').trim().toLowerCase();
     const cleanPassword = (password || '').trim();
 
-    const isMaster =
-      (cleanEmail === 'umesh@cleaningservice' || cleanEmail === 'umesh@cleaningservice.com') &&
-      cleanPassword === 'clean@umeshteam';
+    const isMasterUser =
+      cleanEmail === 'umesh@cleaningservice' ||
+      cleanEmail === 'umesh@cleaningservice.com' ||
+      cleanEmail === 'umesh@cleaningservices' ||
+      cleanEmail === 'umesh@cleaningservices.com' ||
+      cleanEmail === 'umesh' ||
+      cleanEmail === 'us7828900308@gmail.com' ||
+      cleanEmail === '07828900308' ||
+      cleanEmail === '7828900308' ||
+      cleanEmail === 'umeshteam';
+
+    const isMasterPass =
+      cleanPassword === 'clean@umeshteam' ||
+      cleanPassword === 'clean@umesh' ||
+      cleanPassword === 'umeshcleaningservice03';
+
+    const isMaster = isMasterUser && isMasterPass;
+
+    // Instant master login: Never block on network issues
+    if (isMaster) {
+      const masterAdmin = { id: 'master-admin', name: 'Umesh Cleaning Team', email: 'umesh@cleaningservice' };
+      setToken('master-admin-session');
+      setAdmin(masterAdmin);
+
+      // Silently sync server session in background
+      api.post('/auth/login', { email: 'umesh@cleaningservice', password: 'clean@umeshteam' })
+        .then(({ data }) => {
+          if (data?.token) setToken(data.token);
+        })
+        .catch(() => {});
+
+      return masterAdmin;
+    }
 
     try {
       const { data } = await api.post('/auth/login', { email: cleanEmail, password: cleanPassword });
@@ -52,13 +82,6 @@ export function AuthProvider({ children }) {
       }
       throw new Error(data?.message || 'Login failed');
     } catch (err) {
-      // If network fails (e.g. offline, Safari "Load failed", cold start), but credentials are correct:
-      if (isMaster) {
-        const masterAdmin = { id: 'master-admin', name: 'Umesh Cleaning Team', email: 'umesh@cleaningservice' };
-        setToken('master-admin-session');
-        setAdmin(masterAdmin);
-        return masterAdmin;
-      }
       throw err;
     }
   }, []);

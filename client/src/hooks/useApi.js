@@ -11,10 +11,22 @@ export function useApi(path, { auth = false, fallback = [], enabled = true, poll
     if (!enabled) return;
     if (!silent) setLoading(true);
     api.get(path, auth)
-      .then((res) => { setData(res.data ?? fallback); setError(null); })
-      .catch((err) => setError(err.message))
-      .finally(() => { if (!silent) setLoading(false); });
-  }, [path, auth, enabled, fallback]);
+      .then((res) => {
+        if (res && res.data !== undefined) {
+          setData(res.data);
+        }
+        setError(null);
+      })
+      .catch((err) => {
+        // Only set error on explicit/initial load, never during background auto-polling
+        if (!silent) {
+          setError(err.message);
+        }
+      })
+      .finally(() => {
+        if (!silent) setLoading(false);
+      });
+  }, [path, auth, enabled]);
 
   useEffect(() => { load(false); }, [load]);
 

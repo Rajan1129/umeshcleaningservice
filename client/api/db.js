@@ -11,12 +11,29 @@ if (!cached) {
 }
 
 export async function connectDB() {
-  if (cached.conn) return cached.conn;
-  if (!cached.promise) {
-    cached.promise = mongoose.connect(MONGO_URI, { bufferCommands: false });
+  if (cached.conn && mongoose.connection.readyState === 1) {
+    return cached.conn;
   }
-  cached.conn = await cached.promise;
-  return cached.conn;
+  if (!cached.promise) {
+    cached.promise = mongoose
+      .connect(MONGO_URI, {
+        bufferCommands: false,
+        serverSelectionTimeoutMS: 4000,
+        connectTimeoutMS: 4000
+      })
+      .then((m) => m)
+      .catch((err) => {
+        cached.promise = null;
+        throw err;
+      });
+  }
+  try {
+    cached.conn = await cached.promise;
+    return cached.conn;
+  } catch (err) {
+    cached.promise = null;
+    throw err;
+  }
 }
 
 // Booking Schema
