@@ -1,3 +1,4 @@
+import mongoose from 'mongoose';
 import { connectDB, Booking } from '../db.js';
 
 export default async function handler(req, res) {
@@ -9,7 +10,7 @@ export default async function handler(req, res) {
     return res.status(200).end();
   }
 
-  const { id, subaction } = req.query || {};
+  const { id } = req.query || {};
 
   if (!id) {
     return res.status(400).json({ success: false, message: 'Enquiry ID is required' });
@@ -18,14 +19,19 @@ export default async function handler(req, res) {
   try {
     await connectDB();
 
+    if (!mongoose.isValidObjectId(id)) {
+      return res.status(400).json({ success: false, message: 'Invalid enquiry ID' });
+    }
+
+    // GET /api/bookings/:id
     if (req.method === 'GET') {
       const booking = await Booking.findById(id);
       if (!booking) return res.status(404).json({ success: false, message: 'Enquiry not found' });
       return res.status(200).json({ success: true, data: booking });
     }
 
+    // POST /api/bookings/:id/notes (or POST /api/bookings/:id)
     if (req.method === 'POST') {
-      // Handles note creation /api/bookings/:id/notes
       const { text } = req.body || {};
       if (!text) return res.status(400).json({ success: false, message: 'Note text required' });
       const booking = await Booking.findByIdAndUpdate(
@@ -37,18 +43,21 @@ export default async function handler(req, res) {
       return res.status(200).json({ success: true, data: booking });
     }
 
+    // PATCH /api/bookings/:id or PATCH /api/bookings/:id/status
     if (req.method === 'PATCH') {
       const updateData = {};
       if (req.body?.status) updateData.status = req.body.status;
       if (req.body?.name) updateData.name = req.body.name;
       if (req.body?.phone) updateData.phone = req.body.phone;
       if (req.body?.address) updateData.address = req.body.address;
+      if (req.body?.service) updateData.service = req.body.service;
 
       const booking = await Booking.findByIdAndUpdate(id, updateData, { new: true, runValidators: true });
       if (!booking) return res.status(404).json({ success: false, message: 'Enquiry not found' });
       return res.status(200).json({ success: true, data: booking });
     }
 
+    // DELETE /api/bookings/:id
     if (req.method === 'DELETE') {
       const booking = await Booking.findByIdAndDelete(id);
       if (!booking) return res.status(404).json({ success: false, message: 'Enquiry not found' });
@@ -58,6 +67,6 @@ export default async function handler(req, res) {
     return res.status(405).json({ success: false, message: 'Method not allowed' });
   } catch (err) {
     console.error('Booking detail API error:', err);
-    return res.status(500).json({ success: false, message: 'Enquiry operation failed' });
+    return res.status(500).json({ success: false, message: 'Enquiry operation failed: ' + err.message });
   }
 }

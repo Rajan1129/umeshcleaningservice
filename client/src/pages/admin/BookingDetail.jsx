@@ -18,7 +18,7 @@ export default function BookingDetail() {
   if (loading || !booking) return <Spinner label="Loading enquiry" />;
 
   const setStatus = async (status) => {
-    try { await api.patch(`/bookings/${id}/status`, { status }); reload(); }
+    try { await api.patch(`/bookings/${id}`, { status }); reload(); }
     catch (err) { setError(err.message); }
   };
 

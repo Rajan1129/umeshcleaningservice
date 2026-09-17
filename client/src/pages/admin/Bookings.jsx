@@ -21,21 +21,27 @@ export default function Bookings() {
   );
 
   const changeStatus = async (id, value) => {
+    // Optimistic UI update so status changes instantly on screen
+    setData((prev) => (Array.isArray(prev) ? prev.map((b) => (b._id === id ? { ...b, status: value } : b)) : prev));
     try {
-      await api.patch(`/bookings/${id}/status`, { status: value });
+      await api.patch(`/bookings/${id}`, { status: value });
       reload();
     } catch (err) {
       setError(err.message);
+      reload();
     }
   };
 
   const remove = async (id) => {
     if (!window.confirm('Delete this enquiry? This cannot be undone.')) return;
+    // Optimistic UI update so row vanishes immediately
+    setData((prev) => (Array.isArray(prev) ? prev.filter((b) => b._id !== id) : prev));
     try {
       await api.del(`/bookings/${id}`);
       reload();
     } catch (err) {
       setError(err.message);
+      reload();
     }
   };
 
