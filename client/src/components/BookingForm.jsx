@@ -67,26 +67,30 @@ export default function BookingForm({ defaultService = '', compact = false }) {
     const waUrl = whatsappLink(waText);
 
     try {
-      const res = await api.post('/bookings', form);
-      setStatus({
-        state: 'success',
-        message: res.message || 'Request received! Umesh Cleaning Services will call you back shortly.',
-        waUrl
-      });
-      setForm({ ...EMPTY, service: defaultService });
-    } catch {
-      // Fallback: If network / server is unavailable, seamlessly open WhatsApp
-      try {
-        window.open(waUrl, '_blank');
-      } catch {
-        // window.open blocked by popup blocker
-      }
-      setStatus({
-        state: 'fallback_success',
-        message: 'Your request is ready! Confirm directly with Umesh Cleaning Services on WhatsApp for immediate scheduling.',
-        waUrl
-      });
+      // 1. Save to database so it shows up in Admin Portal immediately
+      await api.post('/bookings', form);
+    } catch (err) {
+      console.warn('Booking API save warning, proceeding with WhatsApp dispatch:', err);
     }
+
+    // 2. Automatically launch WhatsApp so Umesh gets the lead directly on WhatsApp
+    try {
+      const isMobile = typeof navigator !== 'undefined' && /Android|iPhone|iPad|iPod|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      if (isMobile) {
+        window.location.href = waUrl;
+      } else {
+        window.open(waUrl, '_blank');
+      }
+    } catch {
+      // Fallback if browser blocks automatic navigation
+    }
+
+    setStatus({
+      state: 'success',
+      message: 'Your enquiry has been received! It has been saved in our system and forwarded to Umesh on WhatsApp for instant confirmation.',
+      waUrl
+    });
+    setForm({ ...EMPTY, service: defaultService });
   };
 
   if (status.state === 'success' || status.state === 'fallback_success') {

@@ -11,6 +11,7 @@ import ReviewsSection from '../components/home/ReviewsSection.jsx';
 import GalleryPreview from '../components/home/GalleryPreview.jsx';
 import FaqSection from '../components/home/FaqSection.jsx';
 import FinalCta from '../components/home/FinalCta.jsx';
+import BookingForm from '../components/BookingForm.jsx';
 import { HOME_FAQS } from '../data/faqs.js';
 import { localBusinessSchema, faqSchema } from '../utils/seo.js';
 
@@ -32,6 +33,23 @@ export default function Home() {
       <HowItWorks />
       <ServiceAreas />
       <ReviewsSection />
+
+      {/* Booking Form Section on Home Page */}
+      <section className="section bg-mist/60 py-12 sm:py-16">
+        <div className="container-x">
+          <div className="max-w-2xl mx-auto text-center mb-8">
+            <p className="eyebrow">Quick &amp; Hassle-Free</p>
+            <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-navy">Book a Cleaning Service in Jalandhar</h2>
+            <p className="text-slateink mt-2 text-sm sm:text-base">
+              Share what needs cleaning. Your enquiry is recorded instantly in our system and forwarded to Umesh on WhatsApp for prompt scheduling.
+            </p>
+          </div>
+          <div className="max-w-2xl mx-auto">
+            <BookingForm />
+          </div>
+        </div>
+      </section>
+
       <GalleryPreview />
       <FaqSection faqs={HOME_FAQS} title="Frequently asked questions" subtitle="Common questions from customers in Jalandhar before they book." />
       <FinalCta />
