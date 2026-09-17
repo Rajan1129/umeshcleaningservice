@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, MessageCircle, Sparkles, Mail, MapPin, Star } from 'lucide-react';
+import { Menu, X, Phone, MessageCircle, Sparkles, Mail, MapPin, Star, Lock, LogIn } from 'lucide-react';
 import { BUSINESS, whatsappLink } from '../utils/constants.js';
+import { useAuth } from '../hooks/useAuth.jsx';
 
 const NAV = [
   { to: '/', label: 'Home' },
@@ -16,6 +17,7 @@ const NAV = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const { pathname } = useLocation();
+  const { admin } = useAuth();
 
   useEffect(() => setOpen(false), [pathname]);
 
@@ -43,6 +45,13 @@ export default function Navbar() {
               <Phone className="h-3.5 w-3.5" aria-hidden="true" />
               {BUSINESS.phoneDisplay}
             </a>
+            <Link
+              to={admin ? '/admin' : '/admin/login'}
+              className="flex items-center gap-1 text-slate-300 hover:text-white transition-colors border-l border-white/20 pl-3 font-medium"
+            >
+              <Lock className="h-3 w-3 text-green-400" aria-hidden="true" />
+              {admin ? 'Dashboard' : 'Login'}
+            </Link>
           </div>
         </div>
       </div>
@@ -89,6 +98,14 @@ export default function Navbar() {
             <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn-whatsapp px-4 py-2.5 text-sm font-semibold">
               <MessageCircle className="h-4 w-4" aria-hidden="true" /> WhatsApp
             </a>
+            <Link
+              to={admin ? '/admin' : '/admin/login'}
+              className="rounded-full px-3.5 py-2 text-xs font-bold text-navy hover:bg-mist transition-colors ring-1 ring-navy/15 flex items-center gap-1.5"
+              title="Admin Login"
+            >
+              <Lock className="h-3.5 w-3.5 text-green-600" aria-hidden="true" />
+              {admin ? 'Admin' : 'Login'}
+            </Link>
           </div>
 
           {/* Mobile Right Action Buttons (Call now + Hamburger) */}
@@ -134,9 +151,18 @@ export default function Navbar() {
                     <MessageCircle className="h-3.5 w-3.5" aria-hidden="true" /> WhatsApp
                   </a>
                 </div>
-                <a href={BUSINESS.emailHref} className="text-center text-xs text-slateink hover:text-navy py-1">
-                  {BUSINESS.email}
-                </a>
+                <div className="flex items-center justify-between pt-1">
+                  <a href={BUSINESS.emailHref} className="text-xs text-slateink hover:text-navy">
+                    {BUSINESS.email}
+                  </a>
+                  <Link
+                    to={admin ? '/admin' : '/admin/login'}
+                    className="text-xs font-bold text-navy hover:text-green-700 flex items-center gap-1 bg-mist px-3 py-1.5 rounded-lg"
+                  >
+                    <Lock className="h-3 w-3 text-green-600" aria-hidden="true" />
+                    {admin ? 'Dashboard' : 'Admin Login'}
+                  </Link>
+                </div>
               </li>
             </ul>
           </nav>

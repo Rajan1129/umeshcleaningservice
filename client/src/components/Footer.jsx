@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Phone, MessageCircle, MapPin, Star, Sparkles, Mail } from 'lucide-react';
+import { Phone, MessageCircle, MapPin, Star, Sparkles, Mail, Lock } from 'lucide-react';
 import { BUSINESS, whatsappLink } from '../utils/constants.js';
 import { AREAS } from '../data/areas.js';
 import services from '../data/services.json';
@@ -56,6 +56,11 @@ export default function Footer() {
             {PAGES.map((p) => (
               <li key={p.to}><Link to={p.to} className="hover:text-white">{p.label}</Link></li>
             ))}
+            <li>
+              <Link to="/admin/login" className="text-white/60 hover:text-white flex items-center gap-1.5 pt-1">
+                <Lock className="h-3.5 w-3.5 text-green-400" aria-hidden="true" /> Admin Login
+              </Link>
+            </li>
           </ul>
         </nav>
 
@@ -85,11 +90,16 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container-x flex flex-col gap-2 py-6 text-xs sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} {BUSINESS.name}. {BUSINESS.category} in {BUSINESS.city}.</p>
-          {BUSINESS.googleProfileUrl && (
-            <a href={BUSINESS.googleProfileUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white">
-              View us on Google
-            </a>
-          )}
+          <div className="flex items-center gap-4">
+            <Link to="/admin/login" className="text-white/50 hover:text-white transition-colors flex items-center gap-1">
+              <Lock className="h-3 w-3 text-green-400" aria-hidden="true" /> Admin Login
+            </Link>
+            {BUSINESS.googleProfileUrl && (
+              <a href={BUSINESS.googleProfileUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                View us on Google
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </footer>
