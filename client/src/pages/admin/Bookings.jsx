@@ -15,7 +15,7 @@ export default function Bookings() {
   const [error, setError] = useState('');
 
   // Poll every 10 seconds for new incoming enquiries automatically
-  const { data, loading, reload, error: fetchError } = useApi(
+  const { data, loading, reload, error: fetchError, setData } = useApi(
     `/bookings?status=${status}&search=${encodeURIComponent(query)}&limit=100`,
     { auth: true, pollInterval: 10000 }
   );
