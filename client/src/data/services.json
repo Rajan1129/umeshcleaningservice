@@ -1,0 +1,277 @@
+[
+  {
+    "order": 1, "title": "Home Cleaning", "slug": "home-cleaning", "icon": "Home",
+    "shortDescription": "Regular cleaning for your whole house — floors, dusting, bathrooms and kitchen surfaces.",
+    "intro": "Home cleaning from Umesh Cleaning Services covers the everyday cleaning a house needs to stay fresh: dusting, floor cleaning, bathroom and kitchen surfaces, and tidying of common areas. Our team brings its own equipment and cleaning materials, so you only need to tell us when to come.",
+    "imageAlt": "Cleaner mopping the floor of a living room in Jalandhar",
+    "includes": ["Dusting of furniture, shelves, doors and switchboards", "Sweeping and mopping of all floors", "Bathroom cleaning including WC, basin and tiles", "Kitchen counter, sink and outer cabinet cleaning", "Cobweb removal from ceilings and corners", "Balcony and staircase cleaning on request"],
+    "suitableFor": ["Families who want a scheduled weekly or monthly clean", "Working couples with little time for housework", "Homes being prepared for guests or a function", "Rented flats being handed over or taken on"],
+    "benefits": ["Keeps dust, allergens and kitchen grease from building up", "Saves hours of your own weekend time", "Consistent results because the same checklist is followed each visit", "Easy to schedule again on WhatsApp once you know the routine"],
+    "process": [
+      { "step": "Tell us your requirement", "detail": "Call or WhatsApp with your house size and the rooms you want covered." },
+      { "step": "We plan the visit", "detail": "We confirm the date, time and the number of cleaners needed." },
+      { "step": "Cleaning day", "detail": "Our team arrives with equipment and works through the agreed checklist." },
+      { "step": "Final walkthrough", "detail": "We walk through the house with you before leaving." }
+    ],
+    "faqs": [
+      { "question": "Do I need to provide cleaning materials?", "answer": "No. Our team brings its own equipment and cleaning materials." },
+      { "question": "Can I book cleaning on a fixed day every week?", "answer": "Yes. Tell us the day and time that suits you and we will schedule your visits." },
+      { "question": "Do you cover flats as well as independent houses?", "answer": "Yes, we clean flats, independent houses and kothis across Jalandhar and nearby towns." }
+    ],
+    "metaTitle": "Home Cleaning Services in Jalandhar | Umesh Cleaning Services",
+    "metaDescription": "Book professional home cleaning in Jalandhar. Dusting, floor cleaning, bathroom and kitchen cleaning by trained cleaners. Call 07828900308 for a free quote."
+  },
+  {
+    "order": 2, "title": "Home Deep Cleaning", "slug": "home-deep-cleaning", "icon": "Sparkles",
+    "shortDescription": "Detailed top-to-bottom cleaning that reaches the areas routine cleaning usually misses.",
+    "intro": "Deep cleaning goes well past the surface. We clean inside and behind fittings, scrub bathroom and kitchen build-up, wipe down high and low areas, and treat the corners that normal cleaning never reaches. It is the service most people book before a festival, a shift into a new home, or once a year as a reset.",
+    "imageAlt": "Deep cleaning of a kitchen and living area in a Jalandhar home",
+    "includes": ["Scrubbing of bathroom tiles, taps, WC and shower areas", "Degreasing of kitchen platform, tiles, chimney exterior and cabinets", "Cleaning inside and on top of wardrobes and cupboards", "Fans, lights, switchboards, doors and window grills", "Floor scrubbing and hard-water stain treatment", "Balcony, utility area and staircase cleaning"],
+    "suitableFor": ["Homes before Diwali, weddings or family functions", "Move-in and move-out cleaning", "Houses that have been shut or unused for a while", "Annual deep cleaning for families with children or elderly members"],
+    "benefits": ["Removes grease, hard-water marks and built-up grime that routine cleaning leaves behind", "Makes a home feel fresher and healthier, especially bathrooms and kitchens", "Reaches high, low and hidden areas safely with the right equipment", "Gives you a clean starting point so routine cleaning stays easier"],
+    "process": [
+      { "step": "Share the details", "detail": "Tell us the number of rooms, bathrooms and any problem areas." },
+      { "step": "Scope the work", "detail": "We confirm what the deep clean will cover and how long it will take." },
+      { "step": "Deep cleaning day", "detail": "The team works room by room, starting from the highest surfaces down to the floor." },
+      { "step": "Check together", "detail": "You inspect each area and we redo anything you are not happy with." }
+    ],
+    "faqs": [
+      { "question": "How long does a deep clean take?", "answer": "It depends on the size and condition of the house. We confirm an expected duration when you share the details." },
+      { "question": "Do I need to be at home during the service?", "answer": "It helps if you or a family member is present at the start and the end so we can agree on the scope and check the result." },
+      { "question": "Is deep cleaning different from regular home cleaning?", "answer": "Yes. Regular cleaning keeps a house tidy. Deep cleaning removes built-up grease, stains and dust from areas that routine cleaning does not reach." }
+    ],
+    "metaTitle": "Home Deep Cleaning in Jalandhar | Umesh Cleaning Services",
+    "metaDescription": "Professional home deep cleaning in Jalandhar. Bathrooms, kitchen, floors, fans and hard-to-reach areas cleaned in detail. Call 07828900308 to book."
+  },
+  {
+    "order": 3, "title": "Bathroom Cleaning", "slug": "bathroom-cleaning", "icon": "ShowerHead",
+    "shortDescription": "Scrubbing and sanitising of tiles, WC, basin, taps and shower areas.",
+    "intro": "Bathrooms collect hard-water marks, soap residue and stains faster than any other room in a Punjab home. Our bathroom cleaning scrubs tiles and grout lines, clears build-up from taps and fittings, and sanitises the WC and basin so the room looks and smells clean again.",
+    "imageAlt": "Freshly cleaned bathroom tiles and fittings",
+    "includes": ["Wall and floor tile scrubbing including grout lines", "WC cleaning and sanitising inside and out", "Basin, taps, shower and fittings descaling", "Mirror, glass partition and shelf cleaning", "Exhaust fan and door cleaning", "Drain area cleaning and deodorising"],
+    "suitableFor": ["Bathrooms with hard-water and yellow stains", "Guest bathrooms before a function", "Rented flats at handover", "Homes where bathrooms have not been deep cleaned in months"],
+    "benefits": ["Removes hard-water scale that ordinary mopping cannot shift", "Sanitised fittings for a more hygienic bathroom", "Brighter tiles and clearer grout lines", "Can be booked on its own or as part of a deep clean"],
+    "process": [
+      { "step": "Tell us the condition", "detail": "Share how many bathrooms and what the main problem is — stains, smell or scale." },
+      { "step": "Fix a time", "detail": "We schedule a slot that works for your household." },
+      { "step": "Scrub and sanitise", "detail": "Tiles, fittings and fixtures are cleaned with the right products for each surface." },
+      { "step": "Rinse and check", "detail": "Everything is rinsed, dried and shown to you before we leave." }
+    ],
+    "faqs": [
+      { "question": "Can you remove hard-water stains?", "answer": "In most cases yes. Very old scale on some fittings may lighten rather than disappear completely, and we tell you honestly what to expect." },
+      { "question": "Do you clean only the bathroom if I ask?", "answer": "Yes. Bathroom cleaning can be booked as a standalone service." }
+    ],
+    "metaTitle": "Bathroom Cleaning Services in Jalandhar | Umesh Cleaning Services",
+    "metaDescription": "Bathroom deep cleaning in Jalandhar — tiles, WC, basin, taps and shower areas scrubbed and sanitised. Call 07828900308 for a free quote."
+  },
+  {
+    "order": 4, "title": "Kitchen Cleaning", "slug": "kitchen-cleaning", "icon": "CookingPot",
+    "shortDescription": "Degreasing of platforms, tiles, cabinets and appliances inside your kitchen.",
+    "intro": "Indian cooking leaves a layer of oil on almost every kitchen surface. Our kitchen cleaning degreases the platform, wall tiles, cabinet fronts and appliance exteriors, and cleans inside cupboards on request, so the kitchen is genuinely clean and not just wiped down.",
+    "imageAlt": "Cleaned kitchen platform, tiles and cabinets",
+    "includes": ["Platform, sink and backsplash degreasing", "Wall tile and cabinet front cleaning", "Cabinet interiors cleaned on request", "Appliance exteriors — fridge, microwave, chimney and hob", "Exhaust and ceiling corner cleaning", "Floor scrubbing and dustbin area cleaning"],
+    "suitableFor": ["Kitchens with heavy oil and masala build-up", "Homes preparing for a festival or function", "New kitchens being handed over", "Annual or half-yearly kitchen deep cleaning"],
+    "benefits": ["Cuts through oil film that normal wiping spreads around", "Reduces smell and keeps cooking areas more hygienic", "Cabinets and tiles look noticeably brighter", "Keeps grease from hardening into stains over time"],
+    "process": [
+      { "step": "Share the kitchen details", "detail": "Tell us the size and whether you want cabinet interiors included." },
+      { "step": "Confirm the slot", "detail": "We pick a time when the kitchen is free, usually mid-morning or afternoon." },
+      { "step": "Degrease and clean", "detail": "Surfaces are treated top to bottom, finishing with the floor." },
+      { "step": "Restock and check", "detail": "Items are put back and you check the finished kitchen." }
+    ],
+    "faqs": [
+      { "question": "Do you clean inside the cabinets?", "answer": "Yes, if you ask for it. Please empty them before the visit so the team can work properly." },
+      { "question": "Do you clean the chimney too?", "answer": "The chimney exterior is included. Internal chimney cleaning is a separate service we also provide." }
+    ],
+    "metaTitle": "Kitchen Cleaning Services in Jalandhar | Umesh Cleaning Services",
+    "metaDescription": "Kitchen deep cleaning in Jalandhar. Platform, tiles, cabinets and appliance degreasing by trained cleaners. Call 07828900308 to book."
+  },
+  {
+    "order": 5, "title": "Sofa Cleaning", "slug": "sofa-cleaning", "icon": "Sofa",
+    "shortDescription": "Vacuuming and shampoo cleaning of fabric and leatherette sofas at your home.",
+    "intro": "Sofas hold dust, body oil and food marks deep inside the fabric. We vacuum the seats and crevices, treat marks, and shampoo the upholstery so the fabric comes up cleaner and fresher. Everything is done at your home — the sofa does not leave the house.",
+    "imageAlt": "Sofa being shampoo cleaned in a living room",
+    "includes": ["Dry vacuuming of seats, backrests, arms and crevices", "Spot treatment of visible marks and stains", "Shampoo or foam cleaning suited to the fabric", "Cushion and cushion cover cleaning", "Cleaning under and behind the sofa", "Drying with the right airflow before we leave"],
+    "suitableFor": ["Fabric sofas that look dull or have absorbed smells", "Homes with children or pets", "Sofas before a family function", "Offices and waiting areas with heavy seating use"],
+    "benefits": ["Lifts embedded dust and allergens from the fabric", "Reduces marks and smell instead of covering them", "Done at home, so the sofa stays where it is", "Fabric is treated according to its type to avoid damage"],
+    "process": [
+      { "step": "Tell us the sofa details", "detail": "Share the number of seats and the fabric type." },
+      { "step": "Schedule the visit", "detail": "We fix a time and bring the machine and cleaning solution." },
+      { "step": "Vacuum, treat and shampoo", "detail": "Dust is removed first, then marks are treated and the fabric is shampooed." },
+      { "step": "Dry and check", "detail": "We dry the upholstery and tell you how long to wait before use." }
+    ],
+    "faqs": [
+      { "question": "How long does the sofa take to dry?", "answer": "Drying time depends on the fabric, weather and ventilation. We tell you when it is safe to use before we leave." },
+      { "question": "Will old stains come out completely?", "answer": "Fresh marks usually come out well. Old, set-in stains may lighten rather than disappear, and we say so before starting." }
+    ],
+    "metaTitle": "Sofa Cleaning Services in Jalandhar | Umesh Cleaning Services",
+    "metaDescription": "Professional sofa cleaning in Jalandhar at your home. Vacuuming, stain treatment and shampoo cleaning for fabric sofas. Call 07828900308."
+  },
+  {
+    "order": 6, "title": "Mattress Cleaning", "slug": "mattress-cleaning", "icon": "BedDouble",
+    "shortDescription": "Vacuuming and shampoo treatment for mattresses, done at your home.",
+    "intro": "A mattress collects dust, dead skin and sweat over years of use, and most of it sits below the surface. We vacuum the mattress thoroughly, treat marks and shampoo the top layer, then dry it properly so you can use the bed the same day where conditions allow.",
+    "imageAlt": "Mattress being vacuumed and cleaned in a bedroom",
+    "includes": ["Deep vacuuming of both sides and the edges", "Spot treatment for visible marks", "Shampoo or foam cleaning of the surface", "Bed base and headboard dusting", "Drying before the bed is made again"],
+    "suitableFor": ["Mattresses that have never been professionally cleaned", "Homes where someone has dust allergies", "Children's beds", "Guest room mattresses before visitors arrive"],
+    "benefits": ["Removes dust and allergens you cannot see", "Freshens up the sleeping surface", "Cleaned at home without moving the mattress out", "Extends how long a mattress stays pleasant to sleep on"],
+    "process": [
+      { "step": "Share mattress details", "detail": "Tell us the size and number of mattresses." },
+      { "step": "Fix a slot", "detail": "Mornings work best so the mattress has time to dry." },
+      { "step": "Vacuum and treat", "detail": "We vacuum deeply, treat marks and shampoo the surface." },
+      { "step": "Dry and hand over", "detail": "We dry the mattress and tell you when the bed can be used." }
+    ],
+    "faqs": [
+      { "question": "Can the bed be used the same day?", "answer": "Usually yes, if the weather allows proper drying. We confirm at the end of the visit." },
+      { "question": "Do you clean foam and spring mattresses both?", "answer": "Yes. The method is adjusted to the mattress type." }
+    ],
+    "metaTitle": "Mattress Cleaning Services in Jalandhar | Umesh Cleaning Services",
+    "metaDescription": "Mattress cleaning in Jalandhar at your home — deep vacuuming, stain treatment and shampoo cleaning. Call 07828900308 for a free quote."
+  },
+  {
+    "order": 7, "title": "Floor Cleaning", "slug": "floor-cleaning", "icon": "Grid2x2",
+    "shortDescription": "Machine scrubbing and stain treatment for marble, tile and granite floors.",
+    "intro": "Floors lose their shine when dirt settles into grout lines and traffic areas. We scrub floors with the right pads and solutions for the surface — marble, granite, vitrified tile or kota stone — and treat stains and grout so the finish looks even again.",
+    "imageAlt": "Floor scrubbing machine cleaning a tiled floor",
+    "includes": ["Machine scrubbing of the floor surface", "Grout line cleaning between tiles", "Stain and paint-spot treatment where possible", "Corner and skirting cleaning", "Staircase and landing floors on request", "Final mopping and drying"],
+    "suitableFor": ["Homes after renovation or painting work", "Marble floors that look dull or patchy", "Shops, showrooms and offices with heavy footfall", "Houses being prepared for handover"],
+    "benefits": ["Machine scrubbing removes what mopping cannot", "Grout lines look clean instead of grey", "Even finish across the whole floor", "Suitable for both homes and commercial spaces"],
+    "process": [
+      { "step": "Tell us the floor type and area", "detail": "Share the material and rough square footage." },
+      { "step": "Confirm the plan", "detail": "We decide the method and equipment for that surface." },
+      { "step": "Scrub and treat", "detail": "The floor is scrubbed section by section, with stains treated separately." },
+      { "step": "Dry and inspect", "detail": "We dry the floor and walk through it with you." }
+    ],
+    "faqs": [
+      { "question": "Can you remove cement or paint marks after construction?", "answer": "Most can be removed or greatly reduced. We check the floor first and tell you what is realistic." },
+      { "question": "Do you polish marble as well?", "answer": "Tell us when you enquire and we will confirm whether the finish you want is possible on your floor." }
+    ],
+    "metaTitle": "Floor Cleaning Services in Jalandhar | Umesh Cleaning Services",
+    "metaDescription": "Floor cleaning in Jalandhar — machine scrubbing for marble, tile and granite floors, plus grout and stain treatment. Call 07828900308."
+  },
+  {
+    "order": 8, "title": "Window Cleaning", "slug": "window-cleaning", "icon": "PanelsTopLeft",
+    "shortDescription": "Glass, frame, grill and track cleaning for homes, shops and offices.",
+    "intro": "Window cleaning covers more than the glass. We clean frames, grills, sliding tracks and sills, and finish the glass streak-free on both sides where it can be reached safely, so rooms get their natural light back.",
+    "imageAlt": "Cleaner wiping a window glass panel streak-free",
+    "includes": ["Interior and exterior glass cleaning where safely reachable", "Frame, grill and mesh cleaning", "Sliding track and channel cleaning", "Sill and ledge wiping", "Balcony railing glass on request"],
+    "suitableFor": ["Homes with dusty road-facing windows", "Shops and showrooms with glass frontage", "Offices with large glass panels", "Houses after construction or painting"],
+    "benefits": ["More natural light in every room", "Tracks that slide properly again", "Grills and mesh cleaned, not just the glass", "Works for homes and commercial frontage alike"],
+    "process": [
+      { "step": "Share the window details", "detail": "Tell us how many windows and which floor they are on." },
+      { "step": "Check access", "detail": "We confirm which exteriors can be reached safely." },
+      { "step": "Clean and detail", "detail": "Tracks and grills first, then the glass." },
+      { "step": "Final check", "detail": "We inspect the glass in daylight for streaks before leaving." }
+    ],
+    "faqs": [
+      { "question": "Do you clean exterior glass on upper floors?", "answer": "Only where it can be reached safely. We check the access during the enquiry and tell you what is possible." },
+      { "question": "Do you clean mosquito mesh too?", "answer": "Yes, mesh and grills are included." }
+    ],
+    "metaTitle": "Window Cleaning Services in Jalandhar | Umesh Cleaning Services",
+    "metaDescription": "Window cleaning in Jalandhar for homes, shops and offices — glass, frames, grills and sliding tracks. Call 07828900308 to book."
+  },
+  {
+    "order": 9, "title": "Carpet Cleaning", "slug": "carpet-cleaning", "icon": "Layers",
+    "shortDescription": "Vacuuming, stain treatment and shampoo cleaning for carpets and rugs.",
+    "intro": "Carpets trap dust deep in the pile where a broom or ordinary vacuum cannot reach. We vacuum thoroughly, treat marks, shampoo the pile and dry the carpet properly so it comes up cleaner and smells fresh again.",
+    "imageAlt": "Carpet being shampoo cleaned with a machine",
+    "includes": ["Deep vacuuming of the full carpet", "Spot and stain treatment", "Shampoo or foam cleaning of the pile", "Edge and corner detailing", "Drying before the carpet is put back"],
+    "suitableFor": ["Living room carpets and large rugs", "Office carpet areas and cabins", "Carpets stored away and being brought back into use", "Homes with pets or small children"],
+    "benefits": ["Lifts dust and allergens out of the pile", "Colours look brighter after cleaning", "Reduces smell rather than masking it", "Cleaned at your home or office"],
+    "process": [
+      { "step": "Tell us the size", "detail": "Share the carpet size, material and any problem spots." },
+      { "step": "Fix a slot", "detail": "We schedule a time that allows enough drying." },
+      { "step": "Vacuum, treat, shampoo", "detail": "Dust is removed first, stains treated, then the pile is cleaned." },
+      { "step": "Dry and place back", "detail": "The carpet is dried and put back in position." }
+    ],
+    "faqs": [
+      { "question": "Do you take the carpet away?", "answer": "Most carpets are cleaned at your place. If a carpet needs workshop cleaning, we tell you beforehand." },
+      { "question": "How long before we can walk on it?", "answer": "It depends on the pile and the weather. We tell you at the end of the visit." }
+    ],
+    "metaTitle": "Carpet Cleaning Services in Jalandhar | Umesh Cleaning Services",
+    "metaDescription": "Carpet and rug cleaning in Jalandhar — deep vacuuming, stain treatment and shampoo cleaning. Call 07828900308 for a free quote."
+  },
+  {
+    "order": 10, "title": "Chimney Cleaning", "slug": "chimney-cleaning", "icon": "Fan",
+    "shortDescription": "Filter, hood and internal cleaning for kitchen chimneys clogged with oil.",
+    "intro": "A kitchen chimney loses suction when oil hardens on its filters and inside the hood. We remove and clean the filters, degrease the hood and internal surfaces that can be safely accessed, and wipe down the exterior so the chimney pulls smoke properly again.",
+    "imageAlt": "Kitchen chimney filters being degreased",
+    "includes": ["Filter removal and degreasing", "Hood interior cleaning where accessible", "Oil collector cleaning", "Exterior body polishing", "Surrounding tile and platform wipe-down"],
+    "suitableFor": ["Chimneys that have lost suction", "Kitchens with heavy daily frying", "Annual kitchen maintenance", "Homes before a festival or function"],
+    "benefits": ["Better suction and less smoke in the kitchen", "Less oil dripping onto the platform", "Cleaner surrounding tiles and cabinets", "Can be combined with a full kitchen clean"],
+    "process": [
+      { "step": "Share chimney details", "detail": "Tell us the type of chimney and when it was last cleaned." },
+      { "step": "Fix a time", "detail": "We schedule a slot when the kitchen is free." },
+      { "step": "Clean and degrease", "detail": "Filters are removed and degreased, and accessible internal surfaces are cleaned." },
+      { "step": "Refit and test", "detail": "Filters go back and we check that the chimney runs properly." }
+    ],
+    "faqs": [
+      { "question": "Do you repair chimneys as well?", "answer": "We provide cleaning. If we notice a fault during the visit, we tell you so you can get it checked." },
+      { "question": "How often should a chimney be cleaned?", "answer": "It depends on how much frying is done at home. Kitchens with heavy daily cooking usually need it more often." }
+    ],
+    "metaTitle": "Chimney Cleaning Services in Jalandhar | Umesh Cleaning Services",
+    "metaDescription": "Kitchen chimney cleaning in Jalandhar — filter degreasing, hood and interior cleaning. Call 07828900308 to book a visit."
+  },
+  {
+    "order": 11, "title": "Office Cleaning", "slug": "office-cleaning", "icon": "Building2",
+    "shortDescription": "Workstation, cabin, washroom and floor cleaning for offices and commercial spaces.",
+    "intro": "Office cleaning from Umesh Cleaning Services covers workstations, cabins, meeting rooms, reception areas, washrooms and floors. We can work outside business hours so your team is not disturbed, and the same checklist is followed on every visit.",
+    "imageAlt": "Office workstations and floor after professional cleaning",
+    "includes": ["Workstation, desk and chair cleaning", "Cabin, meeting room and reception cleaning", "Washroom cleaning and sanitising", "Floor scrubbing or mopping as required", "Glass partition and door cleaning", "Pantry and dustbin area cleaning"],
+    "suitableFor": ["Offices, clinics and consultancies", "Showrooms and retail spaces", "Coaching centres and institutes", "Commercial spaces before or after a fit-out"],
+    "benefits": ["A workspace that looks presentable to clients", "Cleaning scheduled around your working hours", "Consistent standard across every visit", "One team for floors, washrooms and workstations"],
+    "process": [
+      { "step": "Share your requirement", "detail": "Tell us the office size, number of washrooms and preferred timing." },
+      { "step": "Agree the schedule", "detail": "We set up a one-time visit or a repeating schedule." },
+      { "step": "Cleaning visit", "detail": "The team works through the agreed areas with its own equipment." },
+      { "step": "Review", "detail": "Your office contact checks the work and we adjust the checklist if needed." }
+    ],
+    "faqs": [
+      { "question": "Can you clean after office hours?", "answer": "Yes. Evening, early morning and weekend slots can be arranged." },
+      { "question": "Do you take regular contracts?", "answer": "Yes. Tell us how often you need cleaning and we will set up a schedule." }
+    ],
+    "metaTitle": "Office Cleaning Services in Jalandhar | Umesh Cleaning Services",
+    "metaDescription": "Office and commercial cleaning in Jalandhar — workstations, cabins, washrooms and floors, scheduled around your hours. Call 07828900308."
+  },
+  {
+    "order": 12, "title": "Post-Construction Cleaning", "slug": "post-construction-cleaning", "icon": "HardHat",
+    "shortDescription": "Removal of cement dust, paint marks and debris after construction or renovation.",
+    "intro": "After construction or renovation, fine cement dust settles on every surface and paint and putty marks stick to floors, glass and fittings. This service clears the debris, removes marks where possible, and cleans the space room by room so the property is ready to use.",
+    "imageAlt": "Newly built room cleaned after construction work",
+    "includes": ["Debris and packaging removal from the property", "Cement dust removal from all surfaces", "Paint, putty and adhesive spot removal where possible", "Floor scrubbing and grout cleaning", "Window glass, frame and track cleaning", "Bathroom and kitchen fitting cleaning"],
+    "suitableFor": ["Newly built houses before possession", "Flats and kothis after renovation", "Shops and offices after a fit-out", "Properties handed back after repair work"],
+    "benefits": ["Makes a new or renovated property usable straight away", "Removes fine dust that keeps resettling if not cleaned properly", "Protects new fittings by using the right method on each surface", "One team handles floors, glass and bathrooms together"],
+    "process": [
+      { "step": "Site details", "detail": "Tell us the property size and what construction work was done." },
+      { "step": "Site assessment", "detail": "We assess the level of debris and dust and plan the team size." },
+      { "step": "Clear and clean", "detail": "Debris is removed first, then surfaces are cleaned from top to bottom." },
+      { "step": "Final handover", "detail": "We walk through the property with you room by room." }
+    ],
+    "faqs": [
+      { "question": "Do you remove the construction debris as well?", "answer": "Debris clearing can be included. Tell us the quantity when you enquire so we can plan for it." },
+      { "question": "Will all paint and cement marks come off?", "answer": "Most do. Some marks on delicate surfaces cannot be removed without risking damage, and we point those out instead of forcing them." }
+    ],
+    "metaTitle": "Post Construction Cleaning in Jalandhar | Umesh Cleaning Services",
+    "metaDescription": "Post-construction and after-renovation cleaning in Jalandhar. Cement dust, paint marks and debris cleared room by room. Call 07828900308."
+  },
+  {
+    "order": 13, "title": "Jet Washing", "slug": "jet-washing", "icon": "Waves",
+    "shortDescription": "High-pressure washing for driveways, courtyards, walls, terraces and parking areas.",
+    "intro": "Jet washing uses high-pressure water to clean outdoor surfaces that hand cleaning cannot handle — driveways, courtyards, boundary walls, terraces, parking areas and exterior tiles. It clears moss, dirt layers and staining from concrete, stone and tile.",
+    "imageAlt": "High pressure jet washing of an outdoor tiled driveway",
+    "includes": ["Driveway and courtyard washing", "Boundary wall and exterior wall cleaning", "Terrace and balcony floor washing", "Parking area and ramp cleaning", "Moss and algae removal from outdoor surfaces"],
+    "suitableFor": ["Houses with tiled or concrete driveways", "Commercial parking areas", "Terraces before the monsoon or after it", "Properties being prepared for sale or handover"],
+    "benefits": ["Clears dirt layers that brooming only spreads", "Removes slippery moss from outdoor floors", "Makes exteriors look maintained again", "Works on concrete, stone, tile and brick"],
+    "process": [
+      { "step": "Share the area", "detail": "Tell us the surface type and rough size of the area." },
+      { "step": "Check water and access", "detail": "We confirm the water source and access to the site." },
+      { "step": "Jet wash", "detail": "The surface is washed section by section at the right pressure." },
+      { "step": "Clear and check", "detail": "Runoff is cleared and you inspect the finished area." }
+    ],
+    "faqs": [
+      { "question": "Do you bring your own water?", "answer": "We usually connect to the water supply at the site. Tell us during the enquiry if that is not possible." },
+      { "question": "Is jet washing safe for all outdoor surfaces?", "answer": "Pressure is adjusted to the surface. For older or delicate surfaces we use a lower pressure or suggest a different method." }
+    ],
+    "metaTitle": "Jet Washing Services in Jalandhar | Umesh Cleaning Services",
+    "metaDescription": "High-pressure jet washing in Jalandhar for driveways, courtyards, walls, terraces and parking areas. Call 07828900308 for a free quote."
+  }
+]
